@@ -34,11 +34,17 @@
 (require 'navi2ch)
 (require 'navi2ch-mona)
 
+(defun aa-edit-mode--face ()
+  "Return face for display AA."
+  (if (eq navi2ch-mona-face-variable t)
+      'navi2ch-mona16-face
+    navi2ch-mona-face-variable))
+
 ;;;###autoload
 (define-derived-mode aa-edit-mode text-mode "（´д｀）"
   "Major mode for editing AA"
   (navi2ch-mona-setup)
-  (buffer-face-set 'navi2ch-mona16-face))
+  (buffer-face-set (aa-edit-mode--face)))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.mlt\\'" . aa-edit-mode))
