@@ -1,4 +1,4 @@
-;; aa-edit-mode.el --- Major mode for editing AA -*- lexical-binding: t -*-
+;;; aa-edit-mode.el --- Major mode for editing AA -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016 USAMI Kenta
 
