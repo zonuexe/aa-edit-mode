@@ -35,19 +35,23 @@
 
 
 ;;; Code:
-(require 'navi2ch)
-(require 'navi2ch-mona)
+
+(when (require 'navi2ch nil t)
+  (require 'navi2ch-mona))
 
 (defun aa-edit-mode--face ()
   "Return face for display AA."
-  (if (eq navi2ch-mona-face-variable t)
-      'navi2ch-mona16-face
-    navi2ch-mona-face-variable))
+  (if (boundp 'navi2ch-mona-face-variable)
+      (if (eq navi2ch-mona-face-variable t)
+          'navi2ch-mona16-face
+        navi2ch-mona-face-variable)
+    ""))
 
 ;;;###autoload
 (define-derived-mode aa-edit-mode text-mode "（´д｀）"
   "Major mode for editing AA"
-  (navi2ch-mona-setup)
+  (when (fboundp 'navi2ch-mona-setup)
+    (navi2ch-mona-setup))
   (buffer-face-set (aa-edit-mode--face)))
 
 ;;;###autoload
