@@ -6,7 +6,7 @@
 ;; Created: 28 Feb 2016
 ;; Version: 0.0.1
 ;; Keywords: wp text shiftjis mlt yaruo
-;; Package-Requires: ((emacs "24") (navi2ch "2.0.0"))
+;; Package-Requires: ((emacs "24.3") (navi2ch "2.0.0"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -39,6 +39,17 @@
 (when (require 'navi2ch nil t)
   (require 'navi2ch-mona))
 
+(defgroup aa-edit '()
+  "Major mode for editing AA(Shift_JIS Art) and .mlt file"
+  :group 'text)
+
+(defconst aa-edit-mlt-delimiter-regexp
+  (eval-when-compile
+    (rx bol "[SPLIT]")))
+
+(defcustom aa-edit-delimiter-pattern aa-edit-mlt-delimiter-regexp
+  "A delimiter (separator) regexp pattern of ASCII Art that based on `PAGE-DELIMITER'.")
+
 (defun aa-edit-mode--face ()
   "Return face for display AA."
   (if (boundp 'navi2ch-mona-face-variable)
@@ -52,6 +63,7 @@
   "Major mode for editing AA"
   (when (fboundp 'navi2ch-mona-setup)
     (navi2ch-mona-setup))
+  (setq-local page-delimiter aa-edit-delimiter-pattern)
   (buffer-face-set (aa-edit-mode--face)))
 
 ;;;###autoload
