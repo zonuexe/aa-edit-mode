@@ -1,4 +1,4 @@
-* aa-edit-mode
+* （´д｀） Emacs AA Edit mode
 #+BEGIN_HTML
 <a href="https://melpa.org/#/aa-edit-mode"><img src="https://melpa.org/packages/aa-edit-mode-badge.svg" alt="MELPA"></a>
 #+END_HTML
