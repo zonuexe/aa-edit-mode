@@ -1,7 +1,17 @@
 * aa-edit-mode
-Major mode for editing AA Major mode for AA ([[https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E3%82%A2%E3%83%BC%E3%83%88][アスキーアート]], known as [[https://en.wikipedia.org/wiki/Shift_JIS_art][Shift_JIS art]])
-** Setting
-- [[http://qiita.com/tadsan/items/4ed132f5d4372447090f][Emacsでもアスキーアートが読める - Qiita]]
+#+BEGIN_HTML
+<a href="https://melpa.org/#/aa-edit-mode"><img src="https://melpa.org/packages/aa-edit-mode-badge.svg" alt="MELPA"></a>
+#+END_HTML
+
+Major mode for editing AA Major mode for AA ([[https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E3%82%A2%E3%83%BC%E3%83%88][アスキーアート]], known as [[https://en.wikipedia.org/wiki/Shift_JIS_art][Shift_JIS art]]).
+=aa-edit-mode= supports MLT format.  See [[http://yaruo.wikia.com/wiki/%E3%82%84%E3%82%8B%E5%A4%AB%E3%82%B9%E3%83%AC%E7%94%A8MLT%E5%8F%8E%E9%9B%86%E6%89%80][やる夫スレ用MLT収集所 - やる夫 Wiki]].
+
+** Setup
+*** Require
+- [[https://www.gnu.org/software/emacs/][GNU Emacs]] 24.3+
 - [[https://github.com/naota/navi2ch][naota/navi2ch]]: Navi2ch is a navigator for 2ch which works on many Emacsen like GNU Emacs, XEmacs, and Meadow
-** Screenshot
-[[yaruo.png]]
+- (optional) =mona-izmg16.ttf= by [[https://sites.google.com/site/rtfreesoft/font-drop][Font Drops - RT Free Soft]] (=mona-izmg16.7z=)
+
+Written in Japanese: [[http://qiita.com/tadsan/items/4ed132f5d4372447090f][Emacsでもアスキーアートが読める - Qiita]]
+
+[[file:yaruo.png]]
