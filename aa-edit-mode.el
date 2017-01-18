@@ -4,7 +4,7 @@
 
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 28 Feb 2016
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Keywords: wp text shiftjis mlt yaruo
 ;; Package-Requires: ((emacs "24.3") (navi2ch "2.0.0"))
 
