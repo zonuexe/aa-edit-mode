@@ -50,7 +50,8 @@
     (rx bol "[SPLIT]")))
 
 (defcustom aa-edit-delimiter-pattern aa-edit-mlt-delimiter-regexp
-  "A delimiter (separator) regexp pattern of ASCII Art that based on `PAGE-DELIMITER'.")
+  "A delimiter (separator) regexp pattern of ASCII Art that based on `PAGE-DELIMITER'."
+  :type 'regexp)
 
 (defun aa-edit-mode--face ()
   "Return face for display AA."
